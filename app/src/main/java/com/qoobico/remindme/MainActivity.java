@@ -1,6 +1,5 @@
 package com.qoobico.remindme;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -10,9 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TableLayout;
 
-import com.qoobico.remindme.adapter.TabsPagerFragmentAdapter;
+import com.qoobico.remindme.adapter.TabsFragmentAdapter;
 
 /**
  * Created by Aleksandr on 20.01.2016.
@@ -60,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initTabs() {
         viewPager = (ViewPager) findViewById(R.id.viewPager);
-        TabsPagerFragmentAdapter adapter = new TabsPagerFragmentAdapter(getSupportFragmentManager());
+        TabsFragmentAdapter adapter = new TabsFragmentAdapter(this,getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         TabLayout tabLayout= (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager);
