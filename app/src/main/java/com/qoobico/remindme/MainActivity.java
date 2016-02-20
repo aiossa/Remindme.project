@@ -81,12 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()){
                     case R.id.actionNotificationItem:
                         showNotificationTab();
-
-
                 }
-
-
-
                 return true;
             }
         });
